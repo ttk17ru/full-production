@@ -17,6 +17,7 @@ Status: In Development
 ***Frontend Developers***
 
 shiko552009
+
 ttk17ru
 
 ---
@@ -26,8 +27,11 @@ ttk17ru
 ***Used For Making The Project***
 
 Vite: For automating react lib
+
 React.js: For making fast responsive UI
+
 HTML & CSS: For the base design
+
 WebSocket.js: For live streaming of the players data
 
 ---
