@@ -2,32 +2,21 @@
 
 :root
 {
-  /* Main Color Palettes */
+  --nor-button-background-color: ;
+  --nor-button-color: ;
+  --nor-button-border-color: ;
+  --nor-button-border-style: ;
+  --nor-button-border-width: ;
+  --nor-button-border-radius: ;
+  --nor-button-font-family: ;
 
-  /* Official PUBG Esports Style (Dark, Professional) */
-  --black: #000000;
-  --dark-gray-background: #0F0F0F;
-  --section-background: #1A1A1A;
-  --pubg-gold: #F2A900;
-  --light-gray-text: #E5E5E5;
-  --warning-feed-red: #FF3D00;
-
-  /* Neon Modern Esports (Flashy, energetic) */
-  /* Perfect for animations, streaming overlays */
-  /* Works if you want a broadcast / esports vibe like Valorant, CS2, PUBG Global events. */
-  --deep-black-blue: #0B0B0D;
-  --dark-indigo: #1B1F3B;
-  --neon-cyan: #09FBD3;
-  --warm-orange: #F5A623;
-  --white-text: #FFFFFF;
-
-  /* Tactical Military Theme (PUBG Classic) */
-  /* Good for “battlefield” or “military tech” style sites. */
-  --gunmetal-background: #2B2B2B;
-  --military-gray-blue: #3E4A4F;
-  --cool-gray: #8E9E9F;
-  --desert-gold: #C8A165;
-  --light-text-gray: #D9D9D9;
+  --pro-button-background-color: ;
+  --pro-button-color: ;
+  --pro-button-border-color: ;
+  --pro-button-border-style: ;
+  --pro-button-border-width: ;
+  --pro-button-border-radius: ;
+  --pro-button-font-family: ;
 }
 
 body
