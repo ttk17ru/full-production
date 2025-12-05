@@ -28,18 +28,46 @@
   --light-text-gray: #D9D9D9;
 }
 
-// Updated By TECHNO
+/* Updated By TECHNO */
+
 :root
 {
+  /* NORMAL BUTTONS */
   --nor-button-background-color: ;
   --nor-button-color: ;
+  /* ----- */
+  --nor-button-border-color: ;
   --nor-button-border-style: ;
   --nor-button-border-width: ;
   --nor-button-border-radius: ;
+  /* ----- */
+  --nor-button-font-family: ;
+  --nor-button-font-size: ;
+  --nor-button-font-weight: ;
+  /* ----- */
+  --nor-button-hover-background-color: ;
+  --nor-button-hover-color: ;
+  /* ----- */
+  --nor-button-active-background-color: ;
+  --nor-button-active-color: ;
 
+
+  /* PRO BUTTONS */
   --pro-button-background-color: ;
   --pro-button-color: ;
+  /* ----- */
+  --pro-button-border-color: ;
   --pro-button-border-style: ;
   --pro-button-border-width: ;
   --pro-button-border-radius: ;
+  /* ----- */
+  --pro-button-font-family: ;
+  --pro-button-font-size: ;
+  --pro-button-font-weight: ;
+  /* ----- */
+  --pro-button-hover-background-color: ;
+  --pro-button-hover-color: ;
+  /* ----- */
+  --pro-button-active-background-color: ;
+  --pro-button-active-color: ;
 }

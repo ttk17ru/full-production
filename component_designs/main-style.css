@@ -2,26 +2,51 @@
 
 :root
 {
-  --nor-button-background-color: ;
-  --nor-button-color: ;
-  --nor-button-border-color: ;
-  --nor-button-border-style: ;
-  --nor-button-border-width: ;
-  --nor-button-border-radius: ;
-  --nor-button-font-family: ;
+  /* NORMAL BUTTONS */
+  --nor-button-background-color: rgb(167, 18, 18);
+  --nor-button-color: rgb(27, 27, 27);
+  /* ----- */
+  --nor-button-border-color: black;
+  --nor-button-border-style: none;
+  --nor-button-border-width: 0;
+  --nor-button-border-radius: 12px;
+  /* ----- */
+  --nor-button-font-family: TekoMedium;
+  --nor-button-font-size: 1.7rem;
+  /* --nor-button-font-weight: ; NOT NEEDED */
+  /* ----- */
+  --nor-button-hover-background-color: rgb(150, 17, 17);
+  /* --nor-button-hover-color: ; NOT NEEDED */
+  /* ----- */
+  --nor-button-active-background-color: rgb(173, 18, 18);
+  /* --nor-button-active-color: ; NOT NEEDED */
 
-  --pro-button-background-color: ;
-  --pro-button-color: ;
-  --pro-button-border-color: ;
-  --pro-button-border-style: ;
-  --pro-button-border-width: ;
-  --pro-button-border-radius: ;
-  --pro-button-font-family: ;
+
+  /* PRO BUTTONS */
+  --pro-button-background-color: linear-gradient(to top, rgb(229, 67, 30), rgb(255, 123, 0));
+  --pro-button-color: black;
+  /* ----- */
+  --pro-button-border-color: black;
+  --pro-button-border-style: none;
+  --pro-button-border-width: 0;
+  --pro-button-border-radius: 12px;
+  /* ----- */
+  --pro-button-font-family: TekoBold;
+  --pro-button-font-size: 1.7rem;
+  /* --pro-button-font-weight: ; NOT NEEDED */
+  /* ----- */
+  --pro-button-box-shadow-color: rgb(255, 123, 0);
+  /* ----- */
+  /* --pro-button-hover-background-color: ; NOT NEEDED*/
+  /* --pro-button-hover-color: ; NOT NEEDED */
+  /* ----- */
+  /* --pro-button-active-background-color: ; NOT NEEDED */
+  /* --pro-button-active-color: ; NOT NEEDED */
 }
 
 body
 {
-  background-color: var(--dark-indigo);
+  background-color: rgb(60, 40, 93);
 
   display: flex;
   flex-direction: column;
