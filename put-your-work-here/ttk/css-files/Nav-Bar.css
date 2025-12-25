@@ -1,0 +1,79 @@
+.nav-bar
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 20px;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background: linear-gradient(135deg, #1a0033 0%, #0d001a 100%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.logo
+{
+  color: white;
+
+  letter-spacing: 1px;
+
+  font-family: TekoBold;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.nav-link-con
+{
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+
+}
+
+.nav-link
+{
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link::after
+{
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #00ff3a;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after
+{
+  width: 100%;
+}
+    
+.nav-link:hover
+{
+  color: #00ff3a;
+}
+
+.nav-btn-con
+{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.nav-btn-con button
+{
+  padding: 12px 28px;
+  font-size: 16px;
+}

@@ -1,146 +1,1070 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css_files/main-style2.css">
-    <link rel="stylesheet" href="/css_files/header.css">
-    <link rel="stylesheet" href="/css_files/button.css">
-    <link rel="stylesheet" href="/css_files/animations.css">
-    <link rel="shortcut icon" href="/assets/web_logo.png" type="image/x-icon">
-    <title>Home | 2M FAM</title>
-    <style>
-        .sec1
-        {
-            width: 100%;
-            height: 100%;
-
-            border-bottom-style: solid;
-            border-bottom-width: 4px;
-            border-bottom-color: var(--nor-button-background-color);
-        }
-        .sec1-main-con
-        {
-            width: 100%;
-            height: 100%;
-
-            /* background-image: url(assets/bg.jpg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: scroll;
-            background-color: rgb(77, 3, 96); */
-
-            background-color: black;
-
-            border: none;
-            /* border-bottom-left-radius:  18px;
-            border-bottom-right-radius:  18px; */
-        }
-        .sec1-par
-        {
-            width: 450px;
-            color: rgb(79, 163, 0);
-
-            text-shadow: 0 0 25px rgb(79, 163, 0);
-
-            font-size: 1.5rem;
-            font-family: TekoSemiBold;
-            
-            position: relative;
-            top: 37%;
-            left: 17%;
-            transform: translate(-50%, -50%);
-        }
-
-        .sec2
-        {
-            width: 100%;
-        }
-
-        .sec2-main-con
-        {
-            /* display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center; */
-
-            height: 700px;
-            
-            background-color: black;
-
-            border: none;
-        }
-        .offers-con
-        {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            gap: 50px;
-
-            width: 100%;
-            height: 100%;
-
-            background-color: black;
-
-            /* border: none;
-            border-radius: 18px; */
-
-            /* box-shadow: 0 0 15px black; */
-        }
-        .offer-con
-        {
-            width: 370px;
-            height: 600px;
-
-            border: 2px solid rgb(79, 163, 0);
-            border-radius: 18px;
-
-            box-shadow: 0 0 25px rgb(79, 163, 0);
-        }
-    </style>
-</head>
-<body>
-    <!-- HEADER -->
-     <div class="header">
-        <div class="logo-con"></div>
-        <div class="header-buttons-con">
-            <button class="header-button">WEBO</button>
-            <button class="header-button">WEBO</button>
-            <button class="header-button">WEBO</button>
-            <button class="header-button">WEBO</button>
-        </div>
-        <div class="side-buttons">
-            <button class="nor-button">Sign Up</button>
-            <button class="nor-button">Log In</button>
-            <button class="pro-button">Join Us</button>
-        </div>
-    </div>
-
-    <!-- Section 1 -->
-    <section class="sec1">
-        <div class="sec1-main-con">
-            <p class="sec1-par">
-                This is a big web app for ESports management
-                it ease the work of the managers in the ESports and
-                even the teams and handle everything for you.
-                <br>
-                ! SORRY NOTHING IS DONE YET I JUST WANNA KNOW IF THE VIBE
-                OF THE STYLE GOOD OR NOT !
-            </p>
-        </div>
-    </section>
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eSports Platform</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="/_sdk/data_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
     
-    <!-- Section 1 -->
-    <section class="sec2">
-        <div class="sec2-main-con">
-            <div class="offers-con">
-                <div class="offer-con"><h1>OFFER1</h1></div>
-                <div class="offer-con"><h1>OFFER2</h1></div>
-                <div class="offer-con"><h1>OFFER3</h1></div>
-            </div>
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6, .gaming-font {
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    
+    .glow-green {
+      text-shadow: 0 0 10px rgba(0, 255, 58, 0.5), 0 0 20px rgba(0, 255, 58, 0.3);
+    }
+    
+    .glow-orange {
+      box-shadow: 0 0 15px rgba(255, 122, 0, 0.4), 0 0 30px rgba(255, 122, 0, 0.2);
+    }
+    
+    .glow-red {
+      box-shadow: 0 0 15px rgba(208, 0, 0, 0.4), 0 0 30px rgba(208, 0, 0, 0.2);
+    }
+    
+    .card-glow {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 0 20px rgba(138, 43, 226, 0.1);
+    }
+    
+    .nav-link {
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #00ff3a;
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .nav-link:hover {
+      color: #00ff3a;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, #ff7a00 0%, #ff9500 100%);
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #ff9500 0%, #ffb000 100%);
+      transform: translateY(-2px);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid #00ff3a;
+      color: #00ff3a;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-secondary:hover {
+      background: #00ff3a;
+      color: #000000;
+      transform: translateY(-2px);
+    }
+    
+    .event-card {
+      background: linear-gradient(135deg, #1a0033 0%, #0d001a 100%);
+      transition: all 0.3s ease;
+    }
+    
+    .event-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4), 0 0 30px rgba(138, 43, 226, 0.2);
+    }
+    
+    .stat-card {
+      background: linear-gradient(135deg, #1a0033 0%, #0d001a 100%);
+    }
+    
+    .progress-bar {
+      background: linear-gradient(90deg, #00ff3a 0%, #00cc2e 100%);
+      box-shadow: 0 0 10px rgba(0, 255, 58, 0.5);
+    }
+    
+    .status-chip {
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    
+    .status-open {
+      background: rgba(0, 255, 58, 0.2);
+      color: #00ff3a;
+      border: 1px solid #00ff3a;
+    }
+    
+    .status-closed {
+      background: rgba(208, 0, 0, 0.2);
+      color: #d00000;
+      border: 1px solid #d00000;
+    }
+    
+    .status-live {
+      background: rgba(255, 122, 0, 0.2);
+      color: #ff7a00;
+      border: 1px solid #ff7a00;
+    }
+    
+    input, select, textarea {
+      background: rgba(26, 0, 51, 0.5);
+      border: 1px solid rgba(138, 43, 226, 0.3);
+      color: #ffffff;
+      transition: all 0.3s ease;
+    }
+    
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #00ff3a;
+      box-shadow: 0 0 10px rgba(0, 255, 58, 0.2);
+    }
+    
+    .tab-button {
+      padding: 12px 24px;
+      background: transparent;
+      border: none;
+      color: #9ca3af;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-bottom: 2px solid transparent;
+    }
+    
+    .tab-button:hover {
+      color: #00ff3a;
+    }
+    
+    .tab-button.active {
+      color: #00ff3a;
+      border-bottom-color: #00ff3a;
+    }
+    
+    .sidebar-link {
+      padding: 12px 16px;
+      display: block;
+      color: #9ca3af;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      margin-bottom: 8px;
+    }
+    
+    .sidebar-link:hover {
+      background: rgba(0, 255, 58, 0.1);
+      color: #00ff3a;
+    }
+    
+    .sidebar-link.active {
+      background: rgba(0, 255, 58, 0.2);
+      color: #00ff3a;
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+ </head>
+ <body class="h-full bg-black text-white overflow-auto">
+  <div class="main-wrapper h-full w-full"><!-- Navigation -->
+   <nav class="fixed top-0 left-0 right-0 z-50" style="background: linear-gradient(135deg, #1a0033 0%, #0d001a 100%); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);">
+    <div class="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
+     <div class="flex items-center space-x-12">
+      <h1 id="platform-logo" class="text-2xl gaming-font glow-green cursor-pointer" onclick="navigateTo('home')">ESPORTS ARENA</h1>
+      <div class="hidden md:flex space-x-8"><a class="nav-link cursor-pointer" onclick="navigateTo('home')">Home</a> <a class="nav-link cursor-pointer" onclick="navigateTo('events')">Events</a> <a class="nav-link cursor-pointer" onclick="navigateTo('search')">Search</a> <a id="nav-dashboard" class="nav-link cursor-pointer" onclick="navigateTo('dashboard')" style="display: none;">Dashboard</a> <a id="nav-admin" class="nav-link cursor-pointer" onclick="navigateTo('admin')" style="display: none;">Admin</a>
+      </div>
+     </div>
+     <div id="auth-buttons" class="flex items-center space-x-4"><button class="px-6 py-2 rounded-lg font-semibold btn-secondary" onclick="navigateTo('login')">Login</button> <button class="px-6 py-2 rounded-lg font-semibold btn-primary glow-orange" onclick="navigateTo('register')">Sign Up</button> <button class="px-6 py-2 rounded-lg font-semibold btn-primary glow-red" onclick="navigateTo('register')">Join Us</button>
+     </div>
+     <div id="user-menu" class="flex items-center space-x-4" style="display: none;"><span id="user-display" class="text-sm text-gray-300"></span> <button class="px-6 py-2 rounded-lg font-semibold btn-secondary" onclick="handleLogout()">Logout</button>
+     </div>
+    </div>
+   </nav><!-- Main Content -->
+   <main class="pt-24 pb-16" style="min-height: 100%;"><!-- Home Page -->
+    <div id="page-home" class="page-content"><!-- Hero Section -->
+     <section class="text-center py-20 px-8">
+      <h1 id="hero-headline" class="text-6xl md:text-7xl gaming-font glow-green mb-6">COMPETE. DOMINATE. WIN.</h1>
+      <p id="hero-subtext" class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">Join the ultimate competitive gaming platform and prove your skills against the best players worldwide</p>
+      <div class="flex justify-center space-x-6"><button id="cta-primary" class="px-10 py-4 text-lg rounded-lg font-bold btn-primary glow-orange" onclick="navigateTo('register')">JOIN NOW</button> <button id="cta-secondary" class="px-10 py-4 text-lg rounded-lg font-bold btn-secondary" onclick="navigateTo('events')">BROWSE EVENTS</button>
+      </div>
+     </section><!-- Featured Events -->
+     <section class="max-w-7xl mx-auto px-8 py-16">
+      <h2 class="text-4xl gaming-font glow-green mb-8">Featured Events</h2>
+      <div id="featured-events" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+     </section><!-- Top Players -->
+     <section class="max-w-7xl mx-auto px-8 py-16">
+      <h2 class="text-4xl gaming-font glow-green mb-8">Top Players</h2>
+      <div id="top-players" class="grid grid-cols-1 md:grid-cols-4 gap-6"></div>
+     </section><!-- How It Works -->
+     <section class="max-w-7xl mx-auto px-8 py-16">
+      <h2 class="text-4xl gaming-font glow-green text-center mb-12">How It Works</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+       <div class="text-center">
+        <div class="text-6xl mb-4">
+         🎮
         </div>
-    </section>
-</body>
-</html>
+        <h3 class="text-2xl gaming-font mb-3">Sign Up</h3>
+        <p class="text-gray-400">Create your account and connect your gaming profiles</p>
+       </div>
+       <div class="text-center">
+        <div class="text-6xl mb-4">
+         🏆
+        </div>
+        <h3 class="text-2xl gaming-font mb-3">Join Events</h3>
+        <p class="text-gray-400">Browse and join competitive tournaments</p>
+       </div>
+       <div class="text-center">
+        <div class="text-6xl mb-4">
+         💎
+        </div>
+        <h3 class="text-2xl gaming-font mb-3">Win Prizes</h3>
+        <p class="text-gray-400">Compete for cash prizes and glory</p>
+       </div>
+      </div>
+     </section>
+    </div><!-- Login Page -->
+    <div id="page-login" class="page-content" style="display: none;">
+     <div class="max-w-md mx-auto px-8 py-16">
+      <div class="card-glow rounded-xl p-8" style="background: linear-gradient(135deg, #1a0033 0%, #0d001a 100%);">
+       <h2 class="text-4xl gaming-font glow-green mb-8 text-center">Login</h2>
+       <form id="login-form" onsubmit="handleLogin(event)">
+        <div class="mb-6"><label for="login-email" class="block text-sm font-semibold mb-2">Email</label> <input type="email" id="login-email" class="w-full px-4 py-3 rounded-lg" required>
+        </div>
+        <div class="mb-6"><label for="login-password" class="block text-sm font-semibold mb-2">Password</label> <input type="password" id="login-password" class="w-full px-4 py-3 rounded-lg" required>
+        </div>
+        <div id="login-error" class="text-red-500 text-sm mb-4" style="display: none;"></div><button type="submit" class="w-full py-3 rounded-lg font-bold btn-primary glow-orange mb-4">Login</button>
+       </form>
+       <div class="text-center mb-4"><span class="text-gray-400">or</span>
+       </div><button class="w-full py-3 rounded-lg font-semibold mb-3" style="background: #171a21; border: 1px solid #66c0f4;"> <span class="mr-2">🎮</span> Login with Steam </button> <button class="w-full py-3 rounded-lg font-semibold" style="background: #5865F2; border: 1px solid #5865F2;"> <span class="mr-2">💬</span> Login with Discord </button>
+       <p class="text-center text-gray-400 mt-6">Don't have an account? <a class="text-green-400 cursor-pointer hover:underline" onclick="navigateTo('register')">Sign Up</a></p>
+      </div>
+     </div>
+    </div><!-- Register Page -->
+    <div id="page-register" class="page-content" style="display: none;">
+     <div class="max-w-md mx-auto px-8 py-16">
+      <div class="card-glow rounded-xl p-8" style="background: linear-gradient(135deg, #1a0033 0%, #0d001a 100%);">
+       <h2 class="text-4xl gaming-font glow-green mb-8 text-center">Sign Up</h2>
+       <form id="register-form" onsubmit="handleRegister(event)">
+        <div class="mb-4"><label for="register-username" class="block text-sm font-semibold mb-2">Username</label> <input type="text" id="register-username" class="w-full px-4 py-3 rounded-lg" required>
+        </div>
+        <div class="mb-4"><label for="register-email" class="block text-sm font-semibold mb-2">Email</label> <input type="email" id="register-email" class="w-full px-4 py-3 rounded-lg" required>
+        </div>
+        <div class="mb-4"><label for="register-password" class="block text-sm font-semibold mb-2">Password</label> <input type="password" id="register-password" class="w-full px-4 py-3 rounded-lg" required>
+        </div>
+        <div class="mb-6"><label for="register-game" class="block text-sm font-semibold mb-2">Main Game</label> <select id="register-game" class="w-full px-4 py-3 rounded-lg" required> <option value="">Select Game</option> <option value="CS2">Counter-Strike 2</option> <option value="Valorant">Valorant</option> <option value="League of Legends">League of Legends</option> <option value="Dota 2">Dota 2</option> <option value="Fortnite">Fortnite</option> </select>
+        </div>
+        <div id="register-error" class="text-red-500 text-sm mb-4" style="display: none;"></div><button type="submit" class="w-full py-3 rounded-lg font-bold btn-primary glow-orange mb-4">Create Account</button>
+       </form>
+       <p class="text-center text-gray-400 mt-6">Already have an account? <a class="text-green-400 cursor-pointer hover:underline" onclick="navigateTo('login')">Login</a></p>
+      </div>
+     </div>
+    </div><!-- Events Page -->
+    <div id="page-events" class="page-content" style="display: none;">
+     <div class="max-w-7xl mx-auto px-8 py-8">
+      <h1 class="text-5xl gaming-font glow-green mb-8">Events</h1><!-- Filters -->
+      <div class="card-glow rounded-xl p-6 mb-8" style="background: linear-gradient(135deg, #1a0033 0%, #0d001a 100%);">
+       <div class="grid grid-cols-1 md:grid-cols-4 gap-4"><input type="text" id="event-search" placeholder="Search events..." class="px-4 py-2 rounded-lg" oninput="filterEvents()"> <select id="event-game-filter" class="px-4 py-2 rounded-lg" onchange="filterEvents()"> <option value="">All Games</option> <option value="CS2">Counter-Strike 2</option> <option value="Valorant">Valorant</option> <option value="League of Legends">League of Legends</option> <option value="Dota 2">Dota 2</option> </select> <select id="event-region-filter" class="px-4 py-2 rounded-lg" onchange="filterEvents()"> <option value="">All Regions</option> <option value="NA">North America</option> <option value="EU">Europe</option> <option value="ASIA">Asia</option> </select> <select id="event-status-filter" class="px-4 py-2 rounded-lg" onchange="filterEvents()"> <option value="">All Status</option> <option value="Open">Open</option> <option value="Live">Live</option> <option value="Closed">Closed</option> </select>
+       </div>
+      </div><!-- Events Grid -->
+      <div id="events-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+     </div>
+    </div><!-- Event Detail Page -->
+    <div id="page-event-detail" class="page-content" style="display: none;">
+     <div class="max-w-7xl mx-auto px-8 py-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+       <div class="lg:col-span-2">
+        <div class="card-glow rounded-xl p-8 mb-8" style="background: linear-gradient(135deg, #1a0033 0%, #0d001a 100%);">
+         <div class="flex items-center justify-between mb-6">
+          <h1 id="event-detail-title" class="text-4xl gaming-font glow-green"></h1><span id="event-detail-status" class="status-chip"></span>
+         </div>
+         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+          <div>
+           <p class="text-gray-400 text-sm">Game</p>
+           <p id="event-detail-game" class="font-semibold"></p>
+          </div>
+          <div>
+           <p class="text-gray-400 text-sm">Date</p>
+           <p id="event-detail-date" class="font-semibold"></p>
+          </div>
+          <div>
+           <p class="text-gray-400 text-sm">Region</p>
+           <p id="event-detail-region" class="font-semibold"></p>
+          </div>
+          <div>
+           <p class="text-gray-400 text-sm">Prize Pool</p>
+           <p id="event-detail-prize" class="font-semibold text-green-400"></p>
+          </div>
+         </div><!-- Tabs -->
+         <div class="border-b border-gray-700 mb-6"><button class="tab-button active" onclick="switchEventTab('overview')">Overview</button> <button class="tab-button" onclick="switchEventTab('bracket')">Bracket</button> <button class="tab-button" onclick="switchEventTab('standings')">Standings</button> <button class="tab-button" onclick="switchEventTab('chat')">Chat</button>
+         </div>
+         <div id="event-tab-overview" class="tab-content">
+          <h3 class="text-2xl gaming-font mb-4">Description</h3>
+          <p class="text-gray-300 mb-6">Join our competitive tournament and compete for amazing prizes! This is a high-stakes competition for serious players.</p>
+          <h3 class="text-2xl gaming-font mb-4">Rules</h3>
+          <ul class="list-disc list-inside text-gray-300 space-y-2">
+           <li>All participants must follow tournament rules</li>
+           <li>No cheating or exploits allowed</li>
+           <li>Be respectful to other players</li>
+           <li>Match disputes will be handled by admins</li>
+          </ul>
+         </div>
+         <div id="event-tab-bracket" class="tab-content" style="display: none;">
+          <p class="text-gray-400 text-center py-8">Bracket will be generated once registration closes</p>
+         </div>
+         <div id="event-tab-standings" class="tab-content" style="display: none;">
+          <p class="text-gray-400 text-center py-8">Standings will be available when the tournament starts</p>
+         </div>
+         <div id="event-tab-chat" class="tab-content" style="display: none;">
+          <p class="text-gray-400 text-center py-8">Chat will be available during the event</p>
+         </div>
+        </div>
+       </div>
+       <div>
+        <div class="card-glow rounded-xl p-6 mb-6" style="background: linear-gradient(135deg, #1a0033 0%, #0d001a 100%);"><button id="event-join-btn" class="w-full py-3 rounded-lg font-bold btn-primary glow-orange mb-4" onclick="toggleEventJoin()">Join Event</button>
+         <div class="space-y-3 text-sm">
+          <div class="flex justify-between"><span class="text-gray-400">Entry Fee:</span> <span class="font-semibold">Free</span>
+          </div>
+          <div class="flex justify-between"><span class="text-gray-400">Format:</span> <span class="font-semibold">Single Elimination</span>
+          </div>
+          <div class="flex justify-between"><span class="text-gray-400">Slots:</span> <span id="event-detail-slots" class="font-semibold">32 / 64</span>
+          </div>
+         </div>
+        </div>
+        <div class="card-glow rounded-xl p-6" style="background: linear-gradient(135deg, #1a0033 0%, #0d001a 100%);">
+         <h3 class="text-xl gaming-font mb-4">Participants</h3>
+         <div id="event-participants" class="space-y-2"></div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div><!-- Dashboard Page -->
+    <div id="page-dashboard" class="page-content" style="display: none;">
+     <div class="max-w-7xl mx-auto px-8 py-8">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+       <div class="lg:col-span-1">
+        <div class="card-glow rounded-xl p-6" style="background: linear-gradient(135deg, #1a0033 0%, #0d001a 100%);">
+         <nav class="space-y-2"><a class="sidebar-link active" onclick="switchDashboardTab('overview')">📊 Overview</a> <a class="sidebar-link" onclick="switchDashboardTab('events')">🎮 My Events</a> <a class="sidebar-link" onclick="switchDashboardTab('teams')">👥 My Teams</a> <a class="sidebar-link" onclick="switchDashboardTab('settings')">⚙ Settings</a>
+         </nav>
+        </div>
+       </div>
+       <div class="lg:col-span-3"><!-- Overview Tab -->
+        <div id="dashboard-tab-overview" class="dashboard-tab-content">
+         <h1 class="text-4xl gaming-font glow-green mb-8">Dashboard Overview</h1>
+         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div class="stat-card card-glow rounded-xl p-6">
+           <p class="text-gray-400 text-sm mb-2">Win Rate</p>
+           <p id="dash-winrate" class="text-3xl gaming-font text-green-400">0%</p>
+          </div>
+          <div class="stat-card card-glow rounded-xl p-6">
+           <p class="text-gray-400 text-sm mb-2">Events Joined</p>
+           <p id="dash-events" class="text-3xl gaming-font text-orange-400">0</p>
+          </div>
+          <div class="stat-card card-glow rounded-xl p-6">
+           <p class="text-gray-400 text-sm mb-2">Current Rank</p>
+           <p id="dash-rank" class="text-3xl gaming-font text-purple-400">Unranked</p>
+          </div>
+         </div>
+         <div class="card-glow rounded-xl p-6 mb-6" style="background: linear-gradient(135deg, #1a0033 0%, #0d001a 100%);">
+          <h2 class="text-2xl gaming-font mb-4">Upcoming Matches</h2>
+          <p id="dash-no-matches" class="text-gray-400 text-center py-4">No upcoming matches</p>
+          <div id="dash-upcoming-matches"></div>
+         </div>
+        </div><!-- My Events Tab -->
+        <div id="dashboard-tab-events" class="dashboard-tab-content" style="display: none;">
+         <h1 class="text-4xl gaming-font glow-green mb-8">My Events</h1>
+         <div id="dash-my-events" class="space-y-4"></div>
+        </div><!-- My Teams Tab -->
+        <div id="dashboard-tab-teams" class="dashboard-tab-content" style="display: none;">
+         <h1 class="text-4xl gaming-font glow-green mb-8">My Teams</h1>
+         <p class="text-gray-400 text-center py-8">You haven't joined any teams yet</p>
+        </div><!-- Settings Tab -->
+        <div id="dashboard-tab-settings" class="dashboard-tab-content" style="display: none;">
+         <h1 class="text-4xl gaming-font glow-green mb-8">Settings</h1>
+         <div class="card-glow rounded-xl p-6" style="background: linear-gradient(135deg, #1a0033 0%, #0d001a 100%);">
+          <h3 class="text-xl gaming-font mb-4">Profile Settings</h3>
+          <div class="space-y-4">
+           <div><label class="block text-sm font-semibold mb-2">Username</label> <input id="settings-username" type="text" class="w-full px-4 py-2 rounded-lg">
+           </div>
+           <div><label class="block text-sm font-semibold mb-2">Email</label> <input id="settings-email" type="email" class="w-full px-4 py-2 rounded-lg">
+           </div><button class="px-6 py-2 rounded-lg font-semibold btn-primary glow-orange">Save Changes</button>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div><!-- Admin Page -->
+    <div id="page-admin" class="page-content" style="display: none;">
+     <div class="max-w-7xl mx-auto px-8 py-8">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+       <div class="lg:col-span-1">
+        <div class="card-glow rounded-xl p-6" style="background: linear-gradient(135deg, #1a0033 0%, #0d001a 100%);">
+         <nav class="space-y-2"><a class="sidebar-link active" onclick="switchAdminTab('overview')">📊 Overview</a> <a class="sidebar-link" onclick="switchAdminTab('events')">🎮 Events Management</a> <a class="sidebar-link" onclick="switchAdminTab('users')">👥 Users</a> <a class="sidebar-link" onclick="switchAdminTab('reports')">⚠ Reports</a>
+         </nav>
+        </div>
+       </div>
+       <div class="lg:col-span-3"><!-- Admin Overview -->
+        <div id="admin-tab-overview" class="admin-tab-content">
+         <h1 class="text-4xl gaming-font glow-green mb-8">Admin Dashboard</h1>
+         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div class="stat-card card-glow rounded-xl p-6">
+           <p class="text-gray-400 text-sm mb-2">Active Events</p>
+           <p id="admin-active-events" class="text-3xl gaming-font text-green-400">0</p>
+          </div>
+          <div class="stat-card card-glow rounded-xl p-6">
+           <p class="text-gray-400 text-sm mb-2">Total Players</p>
+           <p id="admin-total-players" class="text-3xl gaming-font text-orange-400">0</p>
+          </div>
+          <div class="stat-card card-glow rounded-xl p-6">
+           <p class="text-gray-400 text-sm mb-2">Open Reports</p>
+           <p class="text-3xl gaming-font text-red-400">0</p>
+          </div>
+         </div>
+        </div><!-- Events Management -->
+        <div id="admin-tab-events" class="admin-tab-content" style="display: none;">
+         <div class="flex justify-between items-center mb-8">
+          <h1 class="text-4xl gaming-font glow-green">Events Management</h1><button class="px-6 py-2 rounded-lg font-semibold btn-primary glow-orange" onclick="showCreateEvent()">Create Event</button>
+         </div>
+         <div id="admin-events-list" class="space-y-4"></div>
+        </div><!-- Users Management -->
+        <div id="admin-tab-users" class="admin-tab-content" style="display: none;">
+         <h1 class="text-4xl gaming-font glow-green mb-8">Users Management</h1>
+         <div id="admin-users-list" class="card-glow rounded-xl p-6" style="background: linear-gradient(135deg, #1a0033 0%, #0d001a 100%);"></div>
+        </div><!-- Reports -->
+        <div id="admin-tab-reports" class="admin-tab-content" style="display: none;">
+         <h1 class="text-4xl gaming-font glow-green mb-8">Reports</h1>
+         <p class="text-gray-400 text-center py-8">No reports at this time</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div><!-- Search Page -->
+    <div id="page-search" class="page-content" style="display: none;">
+     <div class="max-w-4xl mx-auto px-8 py-16">
+      <h1 class="text-5xl gaming-font glow-green text-center mb-8">Search</h1>
+      <div class="card-glow rounded-xl p-8 mb-8" style="background: linear-gradient(135deg, #1a0033 0%, #0d001a 100%);"><input type="text" id="global-search" placeholder="Search players, teams, or events..." class="w-full px-6 py-4 rounded-lg text-lg" oninput="performSearch()">
+       <div class="flex justify-center space-x-4 mt-6"><button class="tab-button active" onclick="setSearchFilter('all')">All</button> <button class="tab-button" onclick="setSearchFilter('players')">Players</button> <button class="tab-button" onclick="setSearchFilter('teams')">Teams</button> <button class="tab-button" onclick="setSearchFilter('events')">Events</button>
+       </div>
+      </div>
+      <div id="search-results" class="space-y-4"></div>
+      <div id="search-empty" class="text-center py-12" style="display: none;">
+       <p class="text-gray-400 text-xl">No results found</p>
+      </div>
+     </div>
+    </div>
+   </main><!-- Footer -->
+   <footer class="border-t border-gray-800 py-8">
+    <div class="max-w-7xl mx-auto px-8">
+     <div class="flex flex-col md:flex-row justify-between items-center">
+      <div class="flex space-x-6 mb-4 md:mb-0"><a id="footer-about" class="text-gray-400 hover:text-green-400 cursor-pointer">About Us</a> <a id="footer-support" class="text-gray-400 hover:text-green-400 cursor-pointer">Support</a> <a id="footer-terms" class="text-gray-400 hover:text-green-400 cursor-pointer">Terms of Service</a>
+      </div>
+      <p class="text-gray-500 text-sm">© 2024 eSports Arena. All rights reserved.</p>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <script>
+    const defaultConfig = {
+      background_color: "#000000",
+      primary_surface_color: "#1a0033",
+      text_color: "#ffffff",
+      accent_color: "#00ff3a",
+      cta_primary_color: "#ff7a00",
+      font_family: "Rajdhani",
+      font_size: 16,
+      platform_name: "ESPORTS ARENA",
+      hero_headline: "COMPETE. DOMINATE. WIN.",
+      hero_subtext: "Join the ultimate competitive gaming platform and prove your skills against the best players worldwide",
+      cta_primary: "JOIN NOW",
+      cta_secondary: "BROWSE EVENTS",
+      footer_about: "About Us",
+      footer_support: "Support",
+      footer_terms: "Terms of Service"
+    };
+
+    let currentUser = null;
+    let currentPage = 'home';
+    let currentEventId = null;
+    let searchFilter = 'all';
+    let allRecords = [];
+
+    // Reference data
+    const referenceEvents = [
+      {
+        id: 'evt1',
+        title: 'Winter Championship',
+        game: 'CS2',
+        date: '2024-12-25',
+        prize: '$10,000',
+        status: 'Open',
+        region: 'NA',
+        slots: '32 / 64',
+        organizer: 'ESports Arena'
+      },
+      {
+        id: 'evt2',
+        title: 'Spring Invitational',
+        game: 'Valorant',
+        date: '2024-12-30',
+        prize: '$5,000',
+        status: 'Live',
+        region: 'EU',
+        slots: '16 / 32',
+        organizer: 'Pro Gaming League'
+      },
+      {
+        id: 'evt3',
+        title: 'Masters Tournament',
+        game: 'League of Legends',
+        date: '2024-12-28',
+        prize: '$15,000',
+        status: 'Open',
+        region: 'ASIA',
+        slots: '24 / 64',
+        organizer: 'ESports Arena'
+      }
+    ];
+
+    const referencePlayers = [
+      { username: 'ProGamer123', rank: 'Diamond', wins: 145, losses: 32, kda: '2.8', game: 'CS2', country: 'US' },
+      { username: 'EliteSniper', rank: 'Master', wins: 98, losses: 21, kda: '3.2', game: 'Valorant', country: 'UK' },
+      { username: 'StrategyKing', rank: 'Platinum', wins: 76, losses: 28, kda: '2.1', game: 'League of Legends', country: 'KR' },
+      { username: 'QuickShot', rank: 'Diamond', wins: 112, losses: 35, kda: '2.6', game: 'CS2', country: 'DE' }
+    ];
+
+    // Data SDK Handler
+    const dataHandler = {
+      onDataChanged(data) {
+        allRecords = data;
+        updateDashboardStats();
+        renderMyEvents();
+        renderAdminStats();
+      }
+    };
+
+    // Initialize SDKs
+    async function initializeSdks() {
+      const dataInitResult = await window.dataSdk.init(dataHandler);
+      if (!dataInitResult.isOk) {
+        console.error('Failed to initialize Data SDK');
+      }
+
+      await window.elementSdk.init({
+        defaultConfig,
+        onConfigChange: async (config) => {
+          const baseFont = config.font_family || defaultConfig.font_family;
+          const baseSize = config.font_size || defaultConfig.font_size;
+          const baseFontStack = 'Inter, sans-serif';
+          const gamingFontStack = 'Rajdhani, sans-serif';
+
+          document.body.style.backgroundColor = config.background_color || defaultConfig.background_color;
+          document.body.style.color = config.text_color || defaultConfig.text_color;
+
+          const mainWrapper = document.querySelector('.main-wrapper');
+          if (mainWrapper) {
+            mainWrapper.style.backgroundColor = config.background_color || defaultConfig.background_color;
+          }
+
+          document.querySelectorAll('h1, h2, h3, h4, h5, h6, .gaming-font').forEach(el => {
+            el.style.fontFamily = ${baseFont}, ${gamingFontStack};
+          });
+
+          document.querySelectorAll('body, p, span, a, button, input, select, textarea').forEach(el => {
+            if (!el.classList.contains('gaming-font') && !['H1','H2','H3','H4','H5','H6'].includes(el.tagName)) {
+              el.style.fontFamily = ${baseFont}, ${baseFontStack};
+            }
+          });
+
+          document.body.style.fontSize = ${baseSize}px;
+          document.querySelectorAll('h1').forEach(el => el.style.fontSize = ${baseSize * 3.5}px);
+          document.querySelectorAll('h2').forEach(el => el.style.fontSize = ${baseSize * 2.5}px);
+          document.querySelectorAll('h3').forEach(el => el.style.fontSize = ${baseSize * 1.75}px);
+
+          document.getElementById('platform-logo').textContent = config.platform_name || defaultConfig.platform_name;
+          document.getElementById('hero-headline').textContent = config.hero_headline || defaultConfig.hero_headline;
+          document.getElementById('hero-subtext').textContent = config.hero_subtext || defaultConfig.hero_subtext;
+          document.getElementById('cta-primary').textContent = config.cta_primary || defaultConfig.cta_primary;
+          document.getElementById('cta-secondary').textContent = config.cta_secondary || defaultConfig.cta_secondary;
+          document.getElementById('footer-about').textContent = config.footer_about || defaultConfig.footer_about;
+          document.getElementById('footer-support').textContent = config.footer_support || defaultConfig.footer_support;
+          document.getElementById('footer-terms').textContent = config.footer_terms || defaultConfig.footer_terms;
+
+          document.querySelectorAll('.glow-green').forEach(el => {
+            el.style.color = config.accent_color || defaultConfig.accent_color;
+          });
+        },
+        mapToCapabilities: (config) => ({
+          recolorables: [
+            {
+              get: () => config.background_color || defaultConfig.background_color,
+              set: (value) => {
+                window.elementSdk.config.background_color = value;
+                window.elementSdk.setConfig({ background_color: value });
+              }
+            },
+            {
+              get: () => config.primary_surface_color || defaultConfig.primary_surface_color,
+              set: (value) => {
+                window.elementSdk.config.primary_surface_color = value;
+                window.elementSdk.setConfig({ primary_surface_color: value });
+              }
+            },
+            {
+              get: () => config.text_color || defaultConfig.text_color,
+              set: (value) => {
+                window.elementSdk.config.text_color = value;
+                window.elementSdk.setConfig({ text_color: value });
+              }
+            },
+            {
+              get: () => config.accent_color || defaultConfig.accent_color,
+              set: (value) => {
+                window.elementSdk.config.accent_color = value;
+                window.elementSdk.setConfig({ accent_color: value });
+              }
+            },
+            {
+              get: () => config.cta_primary_color || defaultConfig.cta_primary_color,
+              set: (value) => {
+                window.elementSdk.config.cta_primary_color = value;
+                window.elementSdk.setConfig({ cta_primary_color: value });
+              }
+            }
+          ],
+          borderables: [],
+          fontEditable: {
+            get: () => config.font_family || defaultConfig.font_family,
+            set: (value) => {
+              window.elementSdk.config.font_family = value;
+              window.elementSdk.setConfig({ font_family: value });
+            }
+          },
+          fontSizeable: {
+            get: () => config.font_size || defaultConfig.font_size,
+            set: (value) => {
+              window.elementSdk.config.font_size = value;
+              window.elementSdk.setConfig({ font_size: value });
+            }
+          }
+        }),
+        mapToEditPanelValues: (config) => new Map([
+          ["platform_name", config.platform_name || defaultConfig.platform_name],
+          ["hero_headline", config.hero_headline || defaultConfig.hero_headline],
+          ["hero_subtext", config.hero_subtext || defaultConfig.hero_subtext],
+          ["cta_primary", config.cta_primary || defaultConfig.cta_primary],
+          ["cta_secondary", config.cta_secondary || defaultConfig.cta_secondary],
+          ["footer_about", config.footer_about || defaultConfig.footer_about],
+          ["footer_support", config.footer_support || defaultConfig.footer_support],
+          ["footer_terms", config.footer_terms || defaultConfig.footer_terms]
+        ])
+      });
+    }
+
+    // Navigation
+    function navigateTo(page) {
+      document.querySelectorAll('.page-content').forEach(p => p.style.display = 'none');
+      document.getElementById(page-${page}).style.display = 'block';
+      currentPage = page;
+      
+      if (page === 'home') {
+        renderFeaturedEvents();
+        renderTopPlayers();
+      } else if (page === 'events') {
+        renderEventsGrid();
+      } else if (page === 'dashboard') {
+        updateDashboardStats();
+      } else if (page === 'admin') {
+        renderAdminStats();
+      }
+    }
+
+    // Auth
+    async function handleLogin(e) {
+      e.preventDefault();
+      const email = document.getElementById('login-email').value;
+      const password = document.getElementById('login-password').value;
+
+      const users = allRecords.filter(r => r.type === 'user');
+      const user = users.find(u => u.email === email);
+
+      if (user) {
+        currentUser = user;
+        updateAuthUI();
+        navigateTo('dashboard');
+      } else {
+        document.getElementById('login-error').textContent = 'Invalid credentials';
+        document.getElementById('login-error').style.display = 'block';
+      }
+    }
+
+    async function handleRegister(e) {
+      e.preventDefault();
+      
+      if (allRecords.length >= 999) {
+        document.getElementById('register-error').textContent = 'Maximum user limit reached';
+        document.getElementById('register-error').style.display = 'block';
+        return;
+      }
+
+      const username = document.getElementById('register-username').value;
+      const email = document.getElementById('register-email').value;
+      const mainGame = document.getElementById('register-game').value;
+
+      const newUser = {
+        id: 'user_' + Date.now(),
+        type: 'user',
+        username,
+        email,
+        mainGame,
+        rank: 'Bronze',
+        wins: 0,
+        losses: 0,
+        kda: '0.0',
+        country: 'US',
+        joinedAt: new Date().toISOString()
+      };
+
+      const result = await window.dataSdk.create(newUser);
+      if (result.isOk) {
+        currentUser = newUser;
+        updateAuthUI();
+        navigateTo('dashboard');
+      } else {
+        document.getElementById('register-error').textContent = 'Registration failed';
+        document.getElementById('register-error').style.display = 'block';
+      }
+    }
+
+    function handleLogout() {
+      currentUser = null;
+      updateAuthUI();
+      navigateTo('home');
+    }
+
+    function updateAuthUI() {
+      if (currentUser) {
+        document.getElementById('auth-buttons').style.display = 'none';
+        document.getElementById('user-menu').style.display = 'flex';
+        document.getElementById('user-display').textContent = currentUser.username;
+        document.getElementById('nav-dashboard').style.display = 'block';
+        
+        if (currentUser.email.includes('admin')) {
+          document.getElementById('nav-admin').style.display = 'block';
+        }
+      } else {
+        document.getElementById('auth-buttons').style.display = 'flex';
+        document.getElementById('user-menu').style.display = 'none';
+        document.getElementById('nav-dashboard').style.display = 'none';
+        document.getElementById('nav-admin').style.display = 'none';
+      }
+    }
+
+    // Render Functions
+    function renderFeaturedEvents() {
+      const container = document.getElementById('featured-events');
+      container.innerHTML = referenceEvents.map(event => `
+        <div class="event-card card-glow rounded-xl p-6 cursor-pointer" onclick="viewEvent('${event.id}')">
+          <div class="flex justify-between items-start mb-4">
+            <h3 class="text-xl gaming-font">${event.title}</h3>
+            <span class="status-chip status-${event.status.toLowerCase()}">${event.status}</span>
+          </div>
+          <p class="text-gray-400 mb-2">🎮 ${event.game}</p>
+          <p class="text-gray-400 mb-2">📅 ${event.date}</p>
+          <p class="text-green-400 font-bold mb-4">💰 ${event.prize}</p>
+          <button class="w-full py-2 rounded-lg font-semibold btn-primary">View Event</button>
+        </div>
+      `).join('');
+    }
+
+    function renderTopPlayers() {
+      const container = document.getElementById('top-players');
+      container.innerHTML = referencePlayers.map(player => `
+        <div class="stat-card card-glow rounded-xl p-6 text-center">
+          <div class="text-4xl mb-3">👤</div>
+          <h3 class="gaming-font text-lg mb-2">${player.username}</h3>
+          <p class="text-sm text-gray-400 mb-2">${player.rank}</p>
+          <p class="text-xs text-gray-500">${player.wins}W / ${player.losses}L</p>
+        </div>
+      `).join('');
+    }
+
+    function renderEventsGrid() {
+      const container = document.getElementById('events-grid');
+      container.innerHTML = referenceEvents.map(event => `
+        <div class="event-card card-glow rounded-xl p-6 cursor-pointer" onclick="viewEvent('${event.id}')">
+          <div class="flex justify-between items-start mb-4">
+            <h3 class="text-xl gaming-font">${event.title}</h3>
+            <span class="status-chip status-${event.status.toLowerCase()}">${event.status}</span>
+          </div>
+          <p class="text-gray-400 mb-2">🎮 ${event.game}</p>
+          <p class="text-gray-400 mb-2">📅 ${event.date}</p>
+          <p class="text-gray-400 mb-2">🌍 ${event.region}</p>
+          <p class="text-green-400 font-bold mb-4">💰 ${event.prize}</p>
+          <button class="w-full py-2 rounded-lg font-semibold btn-primary">Join Event</button>
+        </div>
+      `).join('');
+    }
+
+    function viewEvent(eventId) {
+      currentEventId = eventId;
+      const event = referenceEvents.find(e => e.id === eventId);
+      
+      document.getElementById('event-detail-title').textContent = event.title;
+      document.getElementById('event-detail-game').textContent = event.game;
+      document.getElementById('event-detail-date').textContent = event.date;
+      document.getElementById('event-detail-region').textContent = event.region;
+      document.getElementById('event-detail-prize').textContent = event.prize;
+      document.getElementById('event-detail-slots').textContent = event.slots;
+      document.getElementById('event-detail-status').textContent = event.status;
+      document.getElementById('event-detail-status').className = status-chip status-${event.status.toLowerCase()};
+      
+      const participants = allRecords.filter(r => r.type === 'participant' && r.eventId === eventId);
+      const participantsHtml = participants.length > 0 
+        ? participants.map(p => <div class="text-sm py-2 border-b border-gray-700">${p.username}</div>).join('')
+        : '<p class="text-gray-400 text-sm">No participants yet</p>';
+      document.getElementById('event-participants').innerHTML = participantsHtml;
+      
+      navigateTo('event-detail');
+    }
+
+    async function toggleEventJoin() {
+      if (!currentUser) {
+        navigateTo('login');
+        return;
+      }
+
+      if (allRecords.length >= 999) {
+        alert('Maximum participation limit reached. Please try again later.');
+        return;
+      }
+
+      const event = referenceEvents.find(e => e.id === currentEventId);
+      const existing = allRecords.find(r => 
+        r.type === 'participant' && 
+        r.eventId === currentEventId && 
+        r.username === currentUser.username
+      );
+
+      const btn = document.getElementById('event-join-btn');
+      btn.disabled = true;
+      btn.textContent = 'Processing...';
+
+      if (existing) {
+        const result = await window.dataSdk.delete(existing);
+        if (result.isOk) {
+          btn.textContent = 'Join Event';
+        }
+      } else {
+        const participant = {
+          id: 'part_' + Date.now(),
+          type: 'participant',
+          eventId: currentEventId,
+          eventName: event.title,
+          eventGame: event.game,
+          username: currentUser.username,
+          joinedAt: new Date().toISOString()
+        };
+        const result = await window.dataSdk.create(participant);
+        if (result.isOk) {
+          btn.textContent = 'Leave Event';
+        }
+      }
+      
+      btn.disabled = false;
+    }
+
+    function updateDashboardStats() {
+      if (!currentUser) return;
+
+      const userEvents = allRecords.filter(r => 
+        r.type === 'participant' && 
+        r.username === currentUser.username
+      );
+
+      document.getElementById('dash-winrate').textContent = 
+        currentUser.wins + currentUser.losses > 0 
+          ? Math.round((currentUser.wins / (currentUser.wins + currentUser.losses)) * 100) + '%'
+          : '0%';
+      document.getElementById('dash-events').textContent = userEvents.length;
+      document.getElementById('dash-rank').textContent = currentUser.rank;
+
+      if (userEvents.length === 0) {
+        document.getElementById('dash-no-matches').style.display = 'block';
+      } else {
+        document.getElementById('dash-no-matches').style.display = 'none';
+      }
+    }
+
+    function renderMyEvents() {
+      if (!currentUser) return;
+
+      const userEvents = allRecords.filter(r => 
+        r.type === 'participant' && 
+        r.username === currentUser.username
+      );
+
+      const container = document.getElementById('dash-my-events');
+      if (userEvents.length === 0) {
+        container.innerHTML = '<p class="text-gray-400 text-center py-8">You haven\'t joined any events yet</p>';
+      } else {
+        container.innerHTML = userEvents.map(p => `
+          <div class="card-glow rounded-xl p-6" style="background: linear-gradient(135deg, #1a0033 0%, #0d001a 100%);">
+            <h3 class="text-xl gaming-font mb-2">${p.eventName}</h3>
+            <p class="text-gray-400 text-sm">🎮 ${p.eventGame}</p>
+          </div>
+        `).join('');
+      }
+    }
+
+    function renderAdminStats() {
+      const activeEvents = referenceEvents.filter(e => e.status === 'Open' || e.status === 'Live').length;
+      const totalPlayers = allRecords.filter(r => r.type === 'user').length;
+      
+      document.getElementById('admin-active-events').textContent = activeEvents;
+      document.getElementById('admin-total-players').textContent = totalPlayers;
+
+      const eventsContainer = document.getElementById('admin-events-list');
+      eventsContainer.innerHTML = referenceEvents.map(event => `
+        <div class="card-glow rounded-xl p-6" style="background: linear-gradient(135deg, #1a0033 0%, #0d001a 100%);">
+          <div class="flex justify-between items-center">
+            <div>
+              <h3 class="text-xl gaming-font mb-2">${event.title}</h3>
+              <p class="text-gray-400 text-sm">${event.game} • ${event.date}</p>
+            </div>
+            <span class="status-chip status-${event.status.toLowerCase()}">${event.status}</span>
+          </div>
+        </div>
+      `).join('');
+
+      const usersContainer = document.getElementById('admin-users-list');
+      const users = allRecords.filter(r => r.type === 'user');
+      usersContainer.innerHTML = users.length > 0
+        ? users.map(user => `
+            <div class="py-3 border-b border-gray-700">
+              <span class="font-semibold">${user.username}</span>
+              <span class="text-gray-400 text-sm ml-4">${user.email}</span>
+            </div>
+          `).join('')
+        : '<p class="text-gray-400 text-center py-4">No users registered yet</p>';
+    }
+
+    function filterEvents() {
+      renderEventsGrid();
+    }
+
+    function switchEventTab(tab) {
+      document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(content => content.style.display = 'none');
+      event.target.classList.add('active');
+      document.getElementById(event-tab-${tab}).style.display = 'block';
+    }
+
+    function switchDashboardTab(tab) {
+      document.querySelectorAll('.sidebar-link').forEach(link => link.classList.remove('active'));
+      document.querySelectorAll('.dashboard-tab-content').forEach(content => content.style.display = 'none');
+      event.target.classList.add('active');
+      document.getElementById(dashboard-tab-${tab}).style.display = 'block';
+    }
+
+    function switchAdminTab(tab) {
+      document.querySelectorAll('.sidebar-link').forEach(link => link.classList.remove('active'));
+      document.querySelectorAll('.admin-tab-content').forEach(content => content.style.display = 'none');
+      event.target.classList.add('active');
+      document.getElementById(admin-tab-${tab}).style.display = 'block';
+    }
+
+    function performSearch() {
+      const query = document.getElementById('global-search').value.toLowerCase();
+      const resultsContainer = document.getElementById('search-results');
+      const emptyState = document.getElementById('search-empty');
+
+      if (!query) {
+        resultsContainer.innerHTML = '';
+        emptyState.style.display = 'none';
+        return;
+      }
+
+      let results = [];
+      
+      if (searchFilter === 'all' || searchFilter === 'players') {
+        results = results.concat(
+          referencePlayers
+            .filter(p => p.username.toLowerCase().includes(query))
+            .map(p => ({ type: 'player', data: p }))
+        );
+      }
+      
+      if (searchFilter === 'all' || searchFilter === 'events') {
+        results = results.concat(
+          referenceEvents
+            .filter(e => e.title.toLowerCase().includes(query) || e.game.toLowerCase().includes(query))
+            .map(e => ({ type: 'event', data: e }))
+        );
+      }
+
+      if (results.length === 0) {
+        resultsContainer.innerHTML = '';
+        emptyState.style.display = 'block';
+      } else {
+        emptyState.style.display = 'none';
+        resultsContainer.innerHTML = results.map(r => {
+          if (r.type === 'player') {
+            return `
+              <div class="card-glow rounded-xl p-6" style="background: linear-gradient(135deg, #1a0033 0%, #0d001a 100%);">
+                <div class="flex justify-between items-center">
+                  <div>
+                    <span class="inline-block px-2 py-1 rounded text-xs bg-green-500 bg-opacity-20 text-green-400 mb-2">PLAYER</span>
+                    <h3 class="text-xl gaming-font">${r.data.username}</h3>
+                    <p class="text-gray-400 text-sm">${r.data.rank} • ${r.data.game}</p>
+                  </div>
+                  <button class="px-6 py-2 rounded-lg font-semibold btn-secondary">View Profile</button>
+                </div>
+              </div>
+            `;
+          } else {
+            return `
+              <div class="card-glow rounded-xl p-6 cursor-pointer" style="background: linear-gradient(135deg, #1a0033 0%, #0d001a 100%);" onclick="viewEvent('${r.data.id}')">
+                <div class="flex justify-between items-center">
+                  <div>
+                    <span class="inline-block px-2 py-1 rounded text-xs bg-orange-500 bg-opacity-20 text-orange-400 mb-2">EVENT</span>
+                    <h3 class="text-xl gaming-font">${r.data.title}</h3>
+                    <p class="text-gray-400 text-sm">${r.data.game} • ${r.data.date}</p>
+                  </div>
+                  <button class="px-6 py-2 rounded-lg font-semibold btn-secondary">View Event</button>
+                </div>
+              </div>
+            `;
+          }
+        }).join('');
+      }
+    }
+
+    function setSearchFilter(filter) {
+      searchFilter = filter;
+      document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      performSearch();
+    }
+
+    function showCreateEvent()

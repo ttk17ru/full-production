@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>2M ARENA | HOME</title>
+	<link rel="stylesheet" href="main-style.css">
+  <link rel="stylesheet" href="Button.css">
+  <link rel="stylesheet" href="Nav-Bar.css">
+	<link rel="stylesheet" href="Section.css">
+  <link rel="stylesheet" href="fonts/fonts.css">
+	<style>
+		body
+		{
+			background: radial-gradient(circle at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 70%), url("assets/bg2.jpg") center / cover no-repeat;
+			/* background-image: url("assets/bg2.jpg"); */
+			/* background-position: center; */
+			/* background-repeat: no-repeat; */
+			background-size: cover;
+			background-attachment: fixed;
+		}
+
+		/* .hero-sec-con
+		{
+			position: relative;
+			top: 80px;
+
+			width: 100%;
+			height: 600px;
+
+			z-index: -1;
+		} */
+
+		.test-con
+		{
+			width: 100%;
+			height: 100%;
+
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			gap: 20px;
+		}
+
+		.glass {
+			background: rgba(255, 255, 255, 0.15);
+			backdrop-filter: blur(10px);
+			-webkit-backdrop-filter: blur(10px);
+			border-radius: 16px;
+			border: 1px solid rgba(255, 255, 255, 0.3);
+			box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+		}
+
+		.glass-test
+		{
+			background: rgba(0, 0, 0, 0.45);
+			backdrop-filter: blur(12px);
+			-webkit-backdrop-filter: blur(12px);
+				
+			padding: 50px 70px;
+			border-radius: 20px;
+				
+			box-shadow:
+			0 0 25px rgba(255, 255, 255, 0.15),
+			0 0 60px rgba(255, 255, 255, 0.08);
+				
+			display: flex;
+			gap: 20px;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.nav-bar-edit
+		{
+			/* background: rgba(0, 0, 0, 0.45); */
+			backdrop-filter: blur(12px);
+			-webkit-backdrop-filter: blur(12px);
+
+			box-shadow:
+			0 0 25px rgba(255, 255, 255, 0.15),
+			0 0 60px rgba(255, 255, 255, 0.08);
+		}
+	</style>
+</head>
+<body>
+	<!-- NAVIGATION BAR -->
+  <nav class="nav-bar nav-bar-edit">
+    <div class="logo">ESPORTS ARENA</div>
+    <div class="nav-link-con">
+      <a class="nav-link" href="">Home</a>
+      <a class="nav-link" href="">Events</a>
+      <a class="nav-link" href="">Search</a>
+    </div>
+    <div class="nav-btn-con">
+      <button class="pro-button" style="background: transparent;border: 3px solid #ff9500;box-shadow: none;">Login</button>
+      <button class="pro-button" style="background: transparent;border: 3px solid #ff9500;box-shadow: none;">Sign Up</button>
+      <!-- <button class="pro-button">Join Us</button> -->
+    </div>
+  </nav>
+
+	<!-- HERO -->
+	<section class="nor-sec glass-test">
+		<div class="test-con">
+			<button class="nor-button" style="font-size: 18px;color: black;border: none;background-color: white;">JOIN NOW</button>
+			<button class="nor-button" style="font-size: 18px;color: white;border: none;background-color: black;">BROWSE EVENTS</button>
+		</div>
+	</section>
+	<!-- BUTTONS -->
+  <!-- <button class="nor-button">TEST NOR</button>
+  <button class="pro-button">TEST PRO</button> -->
+</body>
+</html>

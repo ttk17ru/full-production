@@ -1,0 +1,14 @@
+.nor-sec
+{
+  /* padding: 60px 20px; */
+  background: linear-gradient(135deg, #1a0033 0%, #0d001a 100%);
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%;
+  height: 120px;
+
+  /* border-radius: 12px; */
+}
